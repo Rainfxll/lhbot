@@ -18,7 +18,7 @@ client.on("ready", async () => {
 console.log(`Jest gotowy do pracy przy ${bot.guilds.size} serwerach i ${bot.users.size} użytkownikach!`);
 
 client.user.setStatus('Game')
-client.user.setActivity("LH-PACK | v2.1 By KukisS", {
+client.user.setActivity("LH-PACK | v2.2 By KukisS", {
     type: "STREAMING",
     url: "https://www.twitch.tv/monstercat"
   });
