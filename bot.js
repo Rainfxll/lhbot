@@ -18,7 +18,7 @@ client.on("ready", async () => {
 console.log(`Jest gotowy do pracy przy ${bot.guilds.size} serwerach i ${bot.users.size} użytkownikach!`);
 
 client.user.setStatus('Game')
-client.user.setActivity("LH-PACK | v2.2 By KukisS", {
+client.user.setActivity("HPROTECT 1.8.8", {
     type: "STREAMING",
     url: "https://www.twitch.tv/monstercat"
   });
@@ -48,30 +48,6 @@ client.on("message", async message => {
     let cmd = client.commands.get(command.slice(prefix.length));
     if(cmd) cmd.run(bot, message, args);
     
-});
-
-client.on('message', (message) => {
-if(message.content.startsWith('!weryfikacja')) {
-message.member.addRole(role = "647911726662287370").catch(console.error);
-message.member.addRole(role = "647971547658846239").catch(console.error);
-message.delete(500);
-}
-});
-
-client.on('message', (message) => {
-if(message.content.startsWith('!akceptuje')) {
-message.member.addRole(role = "647971394432270367").catch(console.error);
-message.member.removeRole(role = "647971547658846239").catch(console.error);
-message.delete(500);
-}
-});
-
-bot.on("guildMemberAdd", function(member){
-    member.guild.channels.find("name", "〔🔨〕commands")
-    let bean = new Discord.RichEmbed()
-        .setColor("0xF1C40F")
-        .setDescription("Powitajmy użytkownika o nazwie :)"  +  member.user.username )
-        message.channel.send(bean)
 });
 
 fs.readdir("./cmds", (err, files) => {
